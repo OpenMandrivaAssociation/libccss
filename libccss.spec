@@ -10,6 +10,7 @@ Group: System/Libraries
 License: LGPLv2+
 URL: http://people.freedesktop.org/~robsta/libccss/
 Source0: http://people.freedesktop.org/~robsta/%{name}/%{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: cairo-devel >= 1.4
 BuildRequires: gtk+2-devel >= 2.10
 BuildRequires: libcroco0.6-devel
