@@ -4,7 +4,7 @@
 
 Name: libccss
 Version: 0.4.0
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
