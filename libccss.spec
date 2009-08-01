@@ -37,7 +37,7 @@ Summary: Development package for %{name}
 Group: Development/C
 Requires: %{libname} = %{version}
 Provides: %{name}-devel = %{version}-%{release}
-Conflicts: gtk-css-engine < 0.4.0
+Conflicts: gtk-css-engine < 0.3.0
 
 %description -n %develname
 Files for development with %{name}.
