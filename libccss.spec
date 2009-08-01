@@ -4,7 +4,7 @@
 
 Name: libccss
 Version: 0.4.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
@@ -37,6 +37,7 @@ Summary: Development package for %{name}
 Group: Development/C
 Requires: %{libname} = %{version}
 Provides: %{name}-devel = %{version}-%{release}
+Conflicts: gtk-css-engine < 0.4.0
 
 %description -n %develname
 Files for development with %{name}.
