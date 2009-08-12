@@ -1,15 +1,15 @@
-%define major 4
+%define major 5
 %define libname %mklibname ccss %major
 %define develname %mklibname -d ccss
-
+%define oname ccss
 Name: libccss
-Version: 0.4.0
-Release: %mkrel 3
+Version: 0.5.0
+Release: %mkrel 1
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
-URL: http://people.freedesktop.org/~robsta/libccss/
-Source0: http://people.freedesktop.org/~robsta/%{name}/%{name}-%{version}.tar.gz
+URL: http://people.freedesktop.org/~robsta/ccss/
+Source0: http://people.freedesktop.org/~robsta/%{oname}/%{oname}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: cairo-devel >= 1.4
 BuildRequires: gtk+2-devel >= 2.10
@@ -43,7 +43,7 @@ Conflicts: gtk-css-engine < 0.3.0
 Files for development with %{name}.
 
 %prep
-%setup -q
+%setup -q -n %oname-%version
 
 %build
 %configure2_5x --disable-examples
@@ -72,8 +72,9 @@ rm -rf %{buildroot}
 
 %files -n %develname
 %defattr(-,root,root,-)
-%{_includedir}/libccss-1
+%{_includedir}/ccss-1
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.so
 %{_datadir}/gtk-doc/html/ccss
 %{_datadir}/gtk-doc/html/ccss-cairo
+%{_datadir}/gtk-doc/html/ccss-gtk
