@@ -4,7 +4,7 @@
 %define oname ccss
 Name: libccss
 Version: 0.5.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
