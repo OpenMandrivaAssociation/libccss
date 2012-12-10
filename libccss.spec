@@ -4,15 +4,14 @@
 %define oname ccss
 Name: libccss
 Version: 0.5.0
-Release: %mkrel 2
+Release: 2
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
 URL: http://people.freedesktop.org/~robsta/ccss/
 Source0: http://people.freedesktop.org/~robsta/%{oname}/%{oname}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: cairo-devel >= 1.4
-BuildRequires: gtk+2-devel >= 2.10
+BuildRequires: pkgconfig(cairo) >= 1.4
+BuildRequires: pkgconfig(gtk+-2.0) >= 2.10
 BuildRequires: libcroco0.6-devel
 BuildRequires: librsvg2-devel >= 2.22.4
 BuildRequires: libsoup-devel
@@ -46,19 +45,13 @@ Files for development with %{name}.
 %setup -q -n %oname-%version
 
 %build
+export LIBS="-lgmodule-2.0"
 %configure2_5x --disable-examples
 
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-
-#Remove libtool archives.
-rm -rf %{buildroot}/%{_libdir}/*.la
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
@@ -78,3 +71,30 @@ rm -rf %{buildroot}
 %{_datadir}/gtk-doc/html/ccss
 %{_datadir}/gtk-doc/html/ccss-cairo
 %{_datadir}/gtk-doc/html/ccss-gtk
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0.5.0-2mdv2011.0
++ Revision: 620086
+- the mass rebuild of 2010.0 packages
+
+* Wed Aug 12 2009 Götz Waschk <waschk@mandriva.org> 0.5.0-1mdv2010.0
++ Revision: 415489
+- new version
+- new major
+- update URL
+- update file list
+
+* Sat Aug 01 2009 Funda Wang <fwang@mandriva.org> 0.4.0-3mdv2010.0
++ Revision: 405355
++ rebuild (emptylog)
+
+* Sat Aug 01 2009 Funda Wang <fwang@mandriva.org> 0.4.0-2mdv2010.0
++ Revision: 405352
+- fix conflicts with older gtk-css-engine
+
+* Sat Aug 01 2009 Funda Wang <fwang@mandriva.org> 0.4.0-1mdv2010.0
++ Revision: 405340
+- add build root
+- import libccss
+
