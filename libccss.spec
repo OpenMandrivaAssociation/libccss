@@ -13,7 +13,7 @@ Source0: http://people.freedesktop.org/~robsta/%{oname}/%{oname}-%{version}.tar.
 BuildRequires: pkgconfig(cairo) >= 1.4
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.10
 BuildRequires: libcroco0.6-devel
-BuildRequires: librsvg2-devel >= 2.22.4
+BuildRequires: pkgconfig(librsvg-2.0) >= 2.22.4
 BuildRequires: libsoup-devel
 
 %description
