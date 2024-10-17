@@ -8,7 +8,7 @@ Release: 4
 Summary: A simple api for CSS Stylesheets
 Group: System/Libraries
 License: LGPLv2+
-URL: http://people.freedesktop.org/~robsta/ccss/
+URL: https://people.freedesktop.org/~robsta/ccss/
 Source0: http://people.freedesktop.org/~robsta/%{oname}/%{oname}-%{version}.tar.gz
 BuildRequires: pkgconfig(cairo) >= 1.4
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.10
