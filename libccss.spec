@@ -10,6 +10,11 @@ Group: System/Libraries
 License: LGPLv2+
 URL: https://people.freedesktop.org/~robsta/ccss/
 Source0: http://people.freedesktop.org/~robsta/%{oname}/%{oname}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(cairo) >= 1.4
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.10
 BuildRequires: libcroco0.6-devel
